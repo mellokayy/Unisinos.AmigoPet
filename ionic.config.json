@@ -1,0 +1,7 @@
+{
+  "name": "AmigoPet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
