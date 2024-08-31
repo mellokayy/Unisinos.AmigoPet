@@ -1,0 +1,21 @@
+ion-tab-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #07694C;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ion-tab-button {
+    background-color: #07694C;
+}
+
+.botao {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}

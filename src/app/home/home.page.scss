@@ -18,10 +18,6 @@
   color: #07694C;
 }
 
-main {
-  background-color: #F4ECE1;
-}
-
 .banners {
   text-align: center;
 }
@@ -52,32 +48,4 @@ main {
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #07694C;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.rodape_icones_itens {
-  margin-bottom: 4px;
-}
-
-.botao {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
 }
