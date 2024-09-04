@@ -1,7 +1,36 @@
 <ion-content>
     <header class="menu_superior">
-        <img class="icon" src="assets/icone_pessoa_verde.png" alt="">
-        <h1 class="titulo_pagina">Amigo Pet</h1>
-        <img class="icon" src="assets/menu_lateral.png" alt="">
+      <img class="icon" src="assets/icone_pessoa_verde.png" alt="Ícone de Pessoa">
+      <h1 class="titulo_pagina">Amigo Pet</h1>
+      <img class="icon" src="assets/menu_lateral.png" alt="Menu Lateral">
     </header>
-</ion-content>
+  
+  
+    <div>
+      <h1>Pets para Adoção</h1>
+
+      <div>
+        <ion-item>
+          <ion-label position="floating">Nome do Pet</ion-label>
+          <ion-input [(ngModel)]="newPet.name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Descrição do Pet</ion-label>
+          <ion-input [(ngModel)]="newPet.description"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">URL da Imagem</ion-label>
+          <ion-input [(ngModel)]="newPet.imageUrl"></ion-input>
+        </ion-item>
+        <ion-button expand="full" (click)="addPet()">Adicionar Pet</ion-button>
+      </div>
+  
+     
+      <div *ngFor="let pet of pets" class="pet-card">
+        <h3>{{ pet.name }}</h3>
+        <p>{{ pet.description }}</p>
+        <img [src]="pet.imageUrl" alt="{{ pet.name }}" width="200">
+        <ion-button color="danger" expand="full" (click)="deletePet(pet.id)">Excluir</ion-button>
+      </div>
+    </div>
+  </ion-content>
