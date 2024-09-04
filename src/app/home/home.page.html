@@ -9,7 +9,7 @@
     </div>
 
     <div class="adocao_pets">
-      <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id)">
+      <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id.toString())">
         <ion-card-content>
           <img [src]="pet.foto" [alt]="pet.nome">
         </ion-card-content>
