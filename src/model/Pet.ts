@@ -1,6 +1,6 @@
 enum Porte{
-    Pequeno = "p",
-    Medio = "m",
+    Pequeno = 'p',
+    Medio = 'm',
     Grande = "g"
 }
 
