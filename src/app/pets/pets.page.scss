@@ -17,3 +17,18 @@
     font-weight: bold;
     color: #07694C;
 }
+
+.pet_card {
+    background-color: #07694C;
+}
+
+.foto_card{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.btn_card{
+    padding: 1%;
+}
