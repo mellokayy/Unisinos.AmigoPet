@@ -14,8 +14,9 @@ export class Pet {
     castrado: boolean;
     temperamento: string;
     adotado: boolean;
+    foto: string;
 
-    constructor(id: string, nome: string, idade: string, genero: 'macho' | 'fêmea', raca: string, porte: Porte, castrado: boolean, temperamento: string, adotado: boolean) {
+    constructor(id: string, nome: string, idade: string, genero: 'macho' | 'fêmea', raca: string, porte: Porte, castrado: boolean, temperamento: string, adotado: boolean, foto: string) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -25,5 +26,6 @@ export class Pet {
         this.castrado = castrado;
         this.temperamento  = temperamento;
         this.adotado = adotado;
+        this.foto = foto;
     }
 }

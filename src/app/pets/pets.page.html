@@ -5,11 +5,12 @@
         <img class="icon" src="assets/menu_lateral.png" alt="">
     </header>
 
-    <section class="petListContainer">
-        <article *ngFor="let item of petList" class="petCard">
+    <section class="pet_list">
+        <article *ngFor="let item of petList" class="pet_card">
+            <img src="{{item.foto}}" alt="foto do pet {{item.nome}}" class="foto_card">
             <h2>{{item.nome}}</h2>
             <p>{{item.idade}}</p>
-            <button>{{item.adotado ? 'Adotado' : 'Adotar'}}</button>
+            <button class="btn_card">{{item.adotado ? 'Adotado' : 'Adotar'}}</button>
         </article>
     </section>
 </ion-content>
