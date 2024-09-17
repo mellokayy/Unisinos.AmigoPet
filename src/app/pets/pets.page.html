@@ -4,4 +4,12 @@
         <h1 class="titulo_pagina">Amigo Pet</h1>
         <img class="icon" src="assets/menu_lateral.png" alt="">
     </header>
+
+    <section class="petListContainer">
+        <article *ngFor="let item of petList" class="petCard">
+            <h2>{{item.nome}}</h2>
+            <p>{{item.idade}}</p>
+            <button>{{item.adotado ? 'Adotado' : 'Adotar'}}</button>
+        </article>
+    </section>
 </ion-content>
