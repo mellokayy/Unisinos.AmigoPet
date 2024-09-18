@@ -10,7 +10,7 @@
             <img src="{{item.foto}}" alt="foto do pet {{item.nome}}" class="foto_card">
             <h2>{{item.nome}}</h2>
             <p>{{item.idade}}</p>
-            <button class="btn_card">{{item.adotado ? 'Adotado' : 'Adotar'}}</button>
+            <button [routerLink]="['/tabs/detalhe-pet', item.id]" class="btn_card">{{item.adotado ? 'Adotado' : 'Adotar'}}</button>
         </article>
     </section>
 </ion-content>
