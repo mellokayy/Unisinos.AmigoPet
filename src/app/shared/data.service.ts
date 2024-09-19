@@ -10,10 +10,13 @@ export class DataService {
   constructor() { }
 
   setPetList(petList: Pet[]): void {
+    localStorage.setItem('petList', JSON.stringify(petList));
     this.sharedPetList = petList;
   }
 
   getPetList(): Pet[] {
+    const storedPetList = localStorage.getItem('petList');
+    if(storedPetList) this.sharedPetList = JSON.parse(storedPetList);
     return this.sharedPetList;
   }
 }
