@@ -4,4 +4,15 @@
         <h1 class="titulo_pagina">Amigo Pet</h1>
         <img class="icon" src="assets/menu_lateral.png" alt="">
     </header>
+
+    <article>
+        <img src="{{petDetail.foto}}" alt="foto do pet {{petDetail.nome}}">
+        <p>Nome: {{petDetail.nome}}</p>
+        <p>Idade: {{petDetail.idade}}</p>
+        <p>Gênero: {{petDetail.genero}}</p>
+        <p>Raça: {{petDetail.raca}}</p>
+        <p>Porte: {{petDetail.porte}}</p>
+        <button>{{petDetail.adotado ? 'Adotado' : 'Adotar'}}</button>
+    </article>
+
 </ion-content>
