@@ -1,23 +1,3 @@
-.menu_superior {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px 5px 10px;
-  background-color: #F4ECE1;
-}
-
-.icon {
-  width: 28px;
-  height: 28px;
-}
-
-.titulo_pagina {
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #07694C;
-}
-
 .banners {
   text-align: center;
 }
@@ -38,14 +18,18 @@
 }
 
 .adocao_pets {
-  display: flex;
-  gap: 10px;
   overflow-x: auto;
+  display: flex;
+  gap: 5px;
 }
 
-.adocao_pets_itens {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
+ion-card {
+  max-width: 80px;
+  max-height: 80px;
+  flex: 0 0 auto;
+}
+
+ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
 }

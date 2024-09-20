@@ -24,6 +24,26 @@ const routes: Routes = [
         loadChildren: () => import('../detalhe-pet/detalhe-pet.module').then(m => m.DetalhePetModule)
       },
       {
+        path: 'quem_somos',
+        loadChildren: () => import('../quem_somos/quem_somos.module').then(m => m.QuemSomosPageModule)
+      },
+      {
+        path: 'configuracoes',
+        loadChildren: () => import('../configuracoes/configuracoes.module').then(m => m.ConfiguracoesPageModule)
+      },
+      {
+        path: 'parceiro',
+        loadChildren: () => import('../seja_parceiro/parceiro.module').then(m => m.ParceiroPageModule)
+      },
+      {
+        path: 'ajuda',
+        loadChildren: () => import('../ajuda/ajuda.module').then(m => m.AjudaPageModule)
+      },
+      {
+        path: 'conta',
+        loadChildren: () => import('../conta/conta.module').then(m => m.ContaPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'

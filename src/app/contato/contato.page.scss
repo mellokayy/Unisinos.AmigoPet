@@ -1,58 +1,66 @@
 .menu_superior {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px 5px 10px;
-    background-color: #F4ECE1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  background-color: #F4ECE1;
 }
 
 .icon {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 .titulo_pagina {
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #07694C;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #07694C;
 }
 
 ion-title {
-    text-align: center;
-    color: #0c5e3c;
-    font-size: 32px;
-  }
+  text-align: center;
+  color: #0c5e3c;
+  font-size: 32px;
+}
 
-  .title-bold {
-    font-weight: bold; /* Deixa o texto em negrito */
-  }
+.title-bold {
+  font-weight: bold;
+  /* Deixa o texto em negrito */
+}
 
-  ion-content.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh; /* Garante que o conteúdo ocupe a altura total da tela */
-    --background: #FFFAF0; /* Background geral */
-    color: black; /* Texto preto */
-  }
+ion-content.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  /* Garante que o conteúdo ocupe a altura total da tela */
+  --background: #FFFAF0;
+  /* Background geral */
+  color: black;
+  /* Texto preto */
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
 
-  .contact {
-    text-align: center;
-    padding: 20px;
-    color: #fefffe;
-  }
+.contact {
+  text-align: center;
+  padding: 20px;
+  color: #fefffe;
+}
 
-  .contact-link {
-    --background: #fefffe; 
-    --color: black; /* Texto preto */
-    color: black;
-    text-align: center;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-  }
+.contact-link {
+  --background: #fefffe;
+  --color: black;
+  /* Texto preto */
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}
 
-  ion-icon {
-    color: black; /* Ícones em preto */
-  }
+ion-icon {
+  color: black;
+  /* Ícones em preto */
+}
