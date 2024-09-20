@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { PetMock } from 'src/app/mock/PetMock';
 import { Pet } from 'src/model/pet.model';
 
@@ -8,10 +9,9 @@ import { Pet } from 'src/model/pet.model';
   styleUrls: ['home.page.scss']
 })
 export class HomePage implements OnInit {
-
   pets: Pet[] = [];
 
-  constructor(private petMock: PetMock) { }
+  constructor(private petMock: PetMock, private navCtrl: NavController) { }
 
   ngOnInit() {
     this.loadPets();
@@ -25,6 +25,10 @@ export class HomePage implements OnInit {
 
   navigateToPetDetail(petId: string) {
     console.log(`Navegando para detalhes do pet com ID: ${petId}`);
-    // this.router.navigate(['/tabs/pet-detail', petId]); AQUI FALTA COLOCAR O REDIRECIONAMENTO PRA ABA
+    this.navCtrl.navigateForward(`/tabs/pet-detail/${petId}`);
+  }
+
+  goToLogin() {
+    this.navCtrl.navigateForward('/login');
   }
 }
