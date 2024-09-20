@@ -1,26 +1,25 @@
-<ion-content>
-  <header class="menu_superior">
-    <img class="icon" src="assets/icone_pessoa_verde.png" alt="">
-    <h1 class="titulo_pagina">Amigo Pet</h1>
-    <img class="icon" src="assets/menu_lateral.png" alt="">
-  </header>
+<ion-header>
+  <ion-toolbar></ion-toolbar>
+</ion-header>
 
+<ion-content fullscreen>
   <main>
     <div class="banners">
-      <img class="banners_itens" src="assets/banner_exemplo.png" alt="">
+      <img class="banners_itens" src="assets/banner_exemplo.png" alt="Banner Exemplo">
     </div>
-    <!-- temporário -->
 
-    <div class="adocao">
-      <h2 class="adocao_titulo">Cães para Adoção</h2>
-      <div class="adocao_pets">
-        <img class="adocao_pets_itens" src="assets/cachorro_1.png" alt="">
-        <img class="adocao_pets_itens" src="assets/cachorro_2.png" alt="">
-        <img class="adocao_pets_itens" src="assets/cachorro_3.png" alt="">
-        <img class="adocao_pets_itens" src="assets/cachorro_4.png" alt="">
-      </div>
+    <div class="adocao_pets">
+      <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id)">
+        <ion-card-content>
+          <img [src]="pet.foto" [alt]="pet.nome">
+        </ion-card-content>
+      </ion-card>
     </div>
-    <!-- temporário -->
+
   </main>
-
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar></ion-toolbar>
+</ion-footer>

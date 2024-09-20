@@ -1,3 +1,25 @@
+.menu_superior,
+ion-menu,
+ion-header,
+ion-toolbar {
+    --background: #F4ECE1;
+}
+
+.titulo_pagina {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #07694C;
+}
+
+ion-menu-button {
+    color: #07694C;
+}
+
+ion-title {
+    color: #07694C;
+}
+
 ion-tab-bar {
     display: flex;
     justify-content: space-around;

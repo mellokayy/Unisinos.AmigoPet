@@ -5,7 +5,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { PetsPage } from './pets.page';
 
-describe('Tab2Page', () => {
+describe('PetsPage', () => {
   let component: PetsPage;
   let fixture: ComponentFixture<PetsPage>;
 

@@ -1,20 +1,74 @@
-<ion-tabs>
+<ion-menu contentId="main-content" side="start">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Amigo Pet</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="navigateToQuemSomos()">
+        <ion-label>Quem somos</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToConfiguracoes()">
+        <ion-label>Configurações</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToSejaParceiro()">
+        <ion-label>Seja parceiro</ion-label>
+      </ion-item>
+      <ion-item (click)="navigateToAjuda()">
+        <ion-label>Ajuda</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-menu contentId="main-content" side="end" menuId="profile-menu">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="navigateToConta()">
+        <ion-label>Minha Conta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sair</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header id="main-content">
+  <ion-toolbar class="menu_superior">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo_pagina">Amigo Pet</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="profile-menu">
+        <img class="icon" src="assets/icone_pessoa_verde.png" alt="Ícone Pessoa">
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home" href="/tabs/home">
       <img class="rodape_icones_itens" src="assets/icone_home.png" alt="Ícone Home">
       <ion-label class="botao">Home</ion-label>
     </ion-tab-button>
-
     <ion-tab-button tab="pets" href="/tabs/pets">
       <img class="rodape_icones_itens" src="assets/icone_pets.png" alt="Ícone Pets">
       <ion-label class="botao">Pets</ion-label>
     </ion-tab-button>
-
     <ion-tab-button tab="contato" href="/tabs/contato">
       <img class="rodape_icones_itens" src="assets/icone_contato.png" alt="Ícone Contato">
       <ion-label class="botao">Contato</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
