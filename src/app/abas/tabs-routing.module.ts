@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../contato/contato.module').then(m => m.ContatoPageModule)
       },
       {
+        path: 'detalhe-pet/:id',
+        loadChildren: () => import('../detalhe-pet/detalhe-pet.module').then(m => m.DetalhePetModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
