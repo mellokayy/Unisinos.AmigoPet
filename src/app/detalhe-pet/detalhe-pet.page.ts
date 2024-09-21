@@ -13,7 +13,7 @@ export class DetalhePetPage implements OnInit {
   petId: string = "";
   petList: Pet[] = [];
   petDetail: Pet = {
-    id: '0',
+    id: 0,
     nome: 'null',
     idade: 'null',
     genero: 'macho',
@@ -26,8 +26,8 @@ export class DetalhePetPage implements OnInit {
   }
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
-  
-  ngOnInit(): void {    
+
+  ngOnInit(): void {
     this.route.paramMap.subscribe((params: any) => {
       this.petId = params.get('id'); // pega o id do pet pelo link da rota
     });
@@ -37,7 +37,7 @@ export class DetalhePetPage implements OnInit {
   }
 
   getPetDetail() {
-    const findPet = this.petList.find((item) => item.id === this.petId);
+    const findPet = this.petList.find((item) => item.id === Number(this.petId));
 
     if (findPet != undefined) {
       this.petDetail = findPet;
