@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-toolbar class="menu_superior">
-    <ion-title class="titulo_pagina">Amigo Pet</ion-title>
-  </ion-toolbar>
+  <ion-toolbar></ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -15,7 +13,8 @@
           <p>{{ item.idade }}</p>
         </div>
 
-        <ion-button [color]="item.adotado ? 'success' : 'primary'" [routerLink]="['/tabs/detalhe-pet', item.id]" class="btn_card">
+        <ion-button [color]="item.adotado ? 'success' : 'primary'" [routerLink]="['/tabs/detalhe-pet', item.id]"
+          class="btn_card">
           {{ item.adotado ? 'Adotado' : 'Adotar' }}
         </ion-button>
       </article>
@@ -59,19 +58,5 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar class="menu_inferior">
-    <ion-tab-button tab="home">
-      <img src="/assets/home-icon.svg" class="menu_icon">
-      <ion-label>Home</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="pets">
-      <img src="/assets/pets-icon.svg" class="menu_icon">
-      <ion-label>Pets</ion-label>
-    </ion-tab-button>
-    <ion-tab-button tab="contato">
-      <img src="/assets/contact-icon.svg" class="menu_icon">
-      <ion-label>Contato</ion-label>
-    </ion-tab-button>
-  </ion-toolbar>
+  <ion-toolbar></ion-toolbar>
 </ion-footer>
-

@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
 
   navigateToPetDetail(petId: string) {
     console.log(`Navegando para detalhes do pet com ID: ${petId}`);
-    this.navCtrl.navigateForward(`/tabs/pet-detail/${petId}`);
+    this.navCtrl.navigateForward(`/tabs/detalhe-pet/${petId}`);
   }
 
   goToLogin() {
