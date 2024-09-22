@@ -30,4 +30,13 @@ export class PetMock {
   getPets(): Observable<Pet[]> {
     return of(this.mockPets); // Retorna um Observable simulando uma resposta da API
   }
+
+  addPet(pet: any) {
+    pet.id = this.mockPets.length + 1; // Gerar um id para o novo pet
+    this.mockPets.push(pet);
+  }
+
+  deletePet(id: number) {
+    this.mockPets = this.mockPets.filter(pet => pet.id !== id);
+  }
 }

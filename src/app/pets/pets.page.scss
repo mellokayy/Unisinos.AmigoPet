@@ -19,8 +19,8 @@
 }
 
 .pet_list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 15px;
     padding: 25px;
     margin-bottom: 65px;

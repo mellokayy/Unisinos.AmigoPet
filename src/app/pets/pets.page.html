@@ -4,20 +4,23 @@
 
 <ion-content>
   <main>
-    <section class="pet_list">
-      <h1>Pets para Adoção</h1>
-      <article *ngFor="let item of petList" class="pet_card">
-        <img [src]="item.foto" alt="Foto de {{ item.nome }}" class="foto_card">
-        <div class="pet_info">
-          <h2>{{ item.nome }}</h2>
-          <p>{{ item.idade }}</p>
-        </div>
+    <h1>Pets para Adoção</h1>
 
-        <ion-button [color]="item.adotado ? 'success' : 'primary'" [routerLink]="['/tabs/detalhe-pet', item.id]"
-          class="btn_card">
-          {{ item.adotado ? 'Adotado' : 'Adotar' }}
-        </ion-button>
-      </article>
+    <section class="pet_list">
+      <ng-container *ngFor="let item of petList">
+        <article *ngIf="!item.adotado" class="pet_card">
+          <img [src]="item.foto" alt="Foto de {{ item.nome }}" class="foto_card">
+          <div class="pet_info">
+            <h2>{{ item.nome }}</h2>
+            <p>{{ item.idade }}</p>
+          </div>
+
+          <ion-button [color]="item.adotado ? 'success' : 'primary'" [routerLink]="['/tabs/detalhe-pet', item.id]"
+            class="btn_card">
+            {{ item.adotado ? 'Adotado' : 'Adotar' }}
+          </ion-button>
+        </article>
+      </ng-container>
     </section>
 
     <section>
@@ -28,7 +31,7 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Idade do Pet</ion-label>
-        <ion-input [(ngModel)]="newPet.idade"></ion-input>
+        <ion-input [(ngModel)]="newPet.idade" type="number"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Gênero</ion-label>
@@ -48,11 +51,16 @@
       <ion-button expand="full" (click)="addPet()">Adicionar Pet</ion-button>
     </section>
 
-    <section *ngFor="let pet of petList" class="pet_card">
-      <h3>{{ pet.nome }}</h3>
-      <p>{{ pet.idade }} anos</p>
-      <img [src]="pet.foto" alt="Foto de {{ pet.nome }}" class="foto_card">
-      <ion-button color="danger" expand="full" (click)="deletePet(pet.id)">Excluir</ion-button>
+    <section>
+      <h2>Lista Geral de Pets</h2>
+      <ng-container *ngFor="let pet of petList">
+        <article class="pet_card">
+          <h3>{{ pet.nome }}</h3>
+          <p>{{ pet.idade }} anos</p>
+          <img [src]="pet.foto" alt="Foto de {{ pet.nome }}" class="foto_card">
+          <ion-button color="danger" expand="full" (click)="deletePet(pet.id)">Excluir</ion-button>
+        </article>
+      </ng-container>
     </section>
   </main>
 </ion-content>

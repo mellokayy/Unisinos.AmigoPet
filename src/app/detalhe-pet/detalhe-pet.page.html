@@ -1,10 +1,8 @@
-<ion-content>
-    <header class="menu_superior">
-        <img class="icon" src="assets/icone_pessoa_verde.png" alt="">
-        <h1 class="titulo_pagina">Amigo Pet</h1>
-        <img class="icon" src="assets/menu_lateral.png" alt="">
-    </header>
+<ion-header>
+    <ion-toolbar></ion-toolbar>
+</ion-header>
 
+<ion-content>
     <section class="pet-details">
         <img class="pet-image" src="{{petDetail.foto}}" alt="foto do pet {{petDetail.nome}}">
         <div class="pet-info">
@@ -18,21 +16,8 @@
         </div>
         <button class="adopt-button">{{petDetail.adotado ? 'Adotado' : 'Adotar'}}</button>
     </section>
-
-    <footer class="menu_inferior">
-        <ion-tab-button tab="home">
-            <ion-icon name="home-outline"></ion-icon>
-            <p>Home</p>
-        </ion-tab-button>
-
-        <ion-tab-button tab="pets">
-            <ion-icon name="paw-outline"></ion-icon>
-            <p>Pets</p>
-        </ion-tab-button>
-
-        <ion-tab-button tab="contact">
-            <ion-icon name="call-outline"></ion-icon>
-            <p>Contato</p>
-        </ion-tab-button>
-    </footer>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar></ion-toolbar>
+</ion-footer>

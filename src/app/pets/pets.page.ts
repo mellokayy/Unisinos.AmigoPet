@@ -48,8 +48,8 @@ export class PetsPage implements OnInit {
     );
 
     this.petList.push(pet);
+    this.dataService.setPetList(this.petList);
 
-    // Limpa o formulário
     this.newPet = {
       nome: '',
       idade: '',
@@ -65,5 +65,6 @@ export class PetsPage implements OnInit {
 
   deletePet(id: number) {
     this.petList = this.petList.filter(pet => pet.id !== id);
+    this.dataService.setPetList(this.petList);
   }
 }

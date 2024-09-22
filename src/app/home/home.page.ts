@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { PetMock } from 'src/app/mock/PetMock';
+import { DataService } from 'src/app/shared/data.service'; // Importe o DataService
 import { Pet } from 'src/model/pet.model';
 
 @Component({
@@ -11,16 +11,14 @@ import { Pet } from 'src/model/pet.model';
 export class HomePage implements OnInit {
   pets: Pet[] = [];
 
-  constructor(private petMock: PetMock, private navCtrl: NavController) { }
+  constructor(private dataService: DataService, private navCtrl: NavController) { }
 
   ngOnInit() {
     this.loadPets();
   }
 
   loadPets() {
-    this.petMock.getPets().subscribe((data: Pet[]) => {
-      this.pets = data;
-    });
+    this.pets = this.dataService.getPetList();
   }
 
   navigateToPetDetail(petId: string) {
@@ -30,5 +28,9 @@ export class HomePage implements OnInit {
 
   goToLogin() {
     this.navCtrl.navigateForward('/login');
+  }
+
+  ionViewWillEnter() {
+    this.loadPets();
   }
 }
