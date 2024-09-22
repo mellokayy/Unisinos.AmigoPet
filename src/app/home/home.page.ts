@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { DataService } from 'src/app/shared/data.service'; // Importe o DataService
 import { Pet } from 'src/model/pet.model';
+import { PetMock } from '../mock/PetMock';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +12,13 @@ import { Pet } from 'src/model/pet.model';
 export class HomePage implements OnInit {
   pets: Pet[] = [];
 
-  constructor(private dataService: DataService, private navCtrl: NavController) { }
+  constructor(private petMock: PetMock, private dataService: DataService, private navCtrl: NavController) { }
 
   ngOnInit() {
-    this.loadPets();
+    this.petMock.getPets().subscribe(data => {
+      this.pets = data;
+      this.dataService.setPetList(this.pets);
+    });
   }
 
   loadPets() {
