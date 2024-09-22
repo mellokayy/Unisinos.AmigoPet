@@ -4,7 +4,7 @@
 
 <ion-content>
   <main>
-    <h1>Pets para Adoção</h1>
+    <ion-title class="titulo_pagina">Pets para Adoção</ion-title>
 
     <section class="pet_list">
       <ng-container *ngFor="let item of petList">
@@ -23,8 +23,9 @@
       </ng-container>
     </section>
 
-    <section>
-      <h2>Adicionar Novo Pet</h2>
+    <ion-title class="titulo_pagina">Adicionar Novo Pet</ion-title>
+
+    <section class="form_secao">
       <ion-item>
         <ion-label position="floating">Nome do Pet</ion-label>
         <ion-input [(ngModel)]="newPet.nome"></ion-input>
@@ -51,12 +52,13 @@
       <ion-button expand="full" (click)="addPet()">Adicionar Pet</ion-button>
     </section>
 
-    <section>
-      <h2>Lista Geral de Pets</h2>
+    <ion-title class="titulo_pagina">Lista Geral de Pets</ion-title>
+
+    <section class="pet_list">
       <ng-container *ngFor="let pet of petList">
         <article class="pet_card">
           <h3>{{ pet.nome }}</h3>
-          <p>{{ pet.idade }} anos</p>
+          <p>{{ pet.idade }}</p>
           <img [src]="pet.foto" alt="Foto de {{ pet.nome }}" class="foto_card">
           <ion-button color="danger" expand="full" (click)="deletePet(pet.id)">Excluir</ion-button>
         </article>
