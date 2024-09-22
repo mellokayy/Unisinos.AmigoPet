@@ -1,7 +1,9 @@
 .menu_superior,
 ion-menu,
 ion-header,
-ion-toolbar {
+ion-toolbar,
+ion-item,
+ion-list {
     --background: #F4ECE1;
 }
 
@@ -40,4 +42,16 @@ ion-tab-button {
     color: white;
     text-decoration: none;
     font-size: 14px;
+}
+
+ion-item {
+    font-family: "Montserrat", sans-serif;
+    color: #07694C;
+    --border-width: 0px;
+    --ion-item-border-color: transparent;
+    box-shadow: none;
+}
+
+ion-list {
+    padding: 0;
 }

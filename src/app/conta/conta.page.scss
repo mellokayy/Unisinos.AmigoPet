@@ -1,3 +1,16 @@
-ion-content {
-    --background: green;
+.container {
+    padding: 15px 20px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #07694C;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+ion-button {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    --background: #07694C;
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { DataService } from 'src/app/shared/data.service'; // Importe o DataService
+import { DataService } from 'src/app/shared/data.service';
 import { Pet } from 'src/model/pet.model';
 import { PetMock } from '../mock/PetMock';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ import { PetMock } from '../mock/PetMock';
 export class HomePage implements OnInit {
   pets: Pet[] = [];
 
-  constructor(private petMock: PetMock, private dataService: DataService, private navCtrl: NavController) { }
+  constructor(private router: Router, private petMock: PetMock, private dataService: DataService, private navCtrl: NavController) { }
 
   ngOnInit() {
     this.petMock.getPets().subscribe(data => {
@@ -36,5 +37,9 @@ export class HomePage implements OnInit {
 
   ionViewWillEnter() {
     this.loadPets();
+  }
+
+  navigateToQuemSomos() {
+    this.router.navigate(['/tabs/quem_somos']);
   }
 }

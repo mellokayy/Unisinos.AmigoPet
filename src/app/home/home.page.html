@@ -5,7 +5,9 @@
 <ion-content fullscreen>
   <main>
     <div class="banners">
-      <img class="banners_itens" src="assets/banner_exemplo.png" alt="Banner Exemplo">
+      <ion-card-content (click)="navigateToQuemSomos()">
+        <img class="banners_itens" src="assets/banner_exemplo.png" alt="Banner Exemplo">
+      </ion-card-content>
     </div>
 
     <div class="adocao">
@@ -16,11 +18,28 @@
         </ion-buttons>
       </div>
       <div class="adocao_pets">
-        <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id.toString())">
-          <ion-card-content>
-            <img [src]="pet.foto" [alt]="pet.nome">
-          </ion-card-content>
-        </ion-card>
+        <ng-container *ngFor="let pet of pets">
+          <ion-card *ngIf="!pet.adotado" (click)="navigateToPetDetail(pet.id.toString())">
+            <ion-card-content>
+              <img [src]="pet.foto" [alt]="pet.nome">
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="adocao">
+      <div class="adocao_header">
+        <ion-title class="adocao_titulo">Pets Adotados</ion-title>
+      </div>
+      <div class="adocao_pets">
+        <ng-container *ngFor="let pet of pets">
+          <ion-card *ngIf="pet.adotado" (click)="navigateToPetDetail(pet.id.toString())">
+            <ion-card-content>
+              <img [src]="pet.foto" [alt]="pet.nome">
+            </ion-card-content>
+          </ion-card>
+        </ng-container>
       </div>
     </div>
   </main>
