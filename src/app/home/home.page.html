@@ -8,12 +8,20 @@
       <img class="banners_itens" src="assets/banner_exemplo.png" alt="Banner Exemplo">
     </div>
 
-    <div class="adocao_pets">
-      <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id.toString())">
-        <ion-card-content>
-          <img [src]="pet.foto" [alt]="pet.nome">
-        </ion-card-content>
-      </ion-card>
+    <div class="adocao">
+      <div class="adocao_header">
+        <ion-title class="adocao_titulo">Pets para Adoção</ion-title>
+        <ion-buttons>
+          <ion-back-button defaultHref="/tabs/pets"></ion-back-button>
+        </ion-buttons>
+      </div>
+      <div class="adocao_pets">
+        <ion-card *ngFor="let pet of pets" (click)="navigateToPetDetail(pet.id.toString())">
+          <ion-card-content>
+            <img [src]="pet.foto" [alt]="pet.nome">
+          </ion-card-content>
+        </ion-card>
+      </div>
     </div>
   </main>
 </ion-content>
