@@ -17,6 +17,18 @@
   color: #07694C;
 }
 
+// .adocao_pets {
+//   overflow-x: auto;
+//   display: flex;
+//   gap: 5px;
+// }
+
+// ion-card {
+//   max-width: 80px;
+//   max-height: 80px;
+//   flex: 0 0 auto;
+// }
+
 .adocao_pets {
   overflow-x: auto;
   display: flex;
@@ -27,6 +39,26 @@ ion-card {
   max-width: 80px;
   max-height: 80px;
   flex: 0 0 auto;
+  padding: 0;
+  /* Remove o padding do card */
+  border-radius: 12px;
+  /* Aumenta o arredondamento dos cards */
+  overflow: hidden;
+  /* Garante que as imagens respeitem o arredondamento */
+}
+
+ion-card-content {
+  padding: 0;
+  /* Remove o padding do conteúdo do card */
+}
+
+ion-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Faz a imagem cobrir o card sem distorcer */
+  border-radius: 12px;
+  /* Garante que a imagem siga o arredondamento do card */
 }
 
 ion-content {
