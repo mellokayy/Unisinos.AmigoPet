@@ -5,14 +5,34 @@
         <img class="icon" src="assets/menu_lateral.png" alt="">
     </header>
 
-    <article>
-        <img src="{{petDetail.foto}}" alt="foto do pet {{petDetail.nome}}">
-        <p>Nome: {{petDetail.nome}}</p>
-        <p>Idade: {{petDetail.idade}}</p>
-        <p>Gênero: {{petDetail.genero}}</p>
-        <p>Raça: {{petDetail.raca}}</p>
-        <p>Porte: {{petDetail.porte}}</p>
-        <button>{{petDetail.adotado ? 'Adotado' : 'Adotar'}}</button>
-    </article>
+    <section class="pet-details">
+        <img class="pet-image" src="{{petDetail.foto}}" alt="foto do pet {{petDetail.nome}}">
+        <div class="pet-info">
+            <p><strong>Nome:</strong> {{petDetail.nome}}</p>
+            <p><strong>Idade:</strong> {{petDetail.idade}} anos</p>
+            <p><strong>Gênero:</strong> {{petDetail.genero}}</p>
+            <p><strong>Raça:</strong> {{petDetail.raca}}</p>
+            <p><strong>Porte:</strong> {{petDetail.porte}}</p>
+            <p><strong>Castrado:</strong> {{petDetail.castrado ? 'Sim' : 'Não'}}</p>
+            <p><strong>Temperamento:</strong> {{petDetail.temperamento}}</p>
+        </div>
+        <button class="adopt-button">{{petDetail.adotado ? 'Adotado' : 'Adotar'}}</button>
+    </section>
 
+    <footer class="menu_inferior">
+        <ion-tab-button tab="home">
+            <ion-icon name="home-outline"></ion-icon>
+            <p>Home</p>
+        </ion-tab-button>
+
+        <ion-tab-button tab="pets">
+            <ion-icon name="paw-outline"></ion-icon>
+            <p>Pets</p>
+        </ion-tab-button>
+
+        <ion-tab-button tab="contact">
+            <ion-icon name="call-outline"></ion-icon>
+            <p>Contato</p>
+        </ion-tab-button>
+    </footer>
 </ion-content>

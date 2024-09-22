@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px 5px 10px;
+    padding: 10px;
     background-color: #F4ECE1;
 }
 
@@ -13,22 +13,84 @@
 
 .titulo_pagina {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #07694C;
 }
 
+.pet_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 25px;
+    margin-bottom: 65px;
+}
+
 .pet_card {
     background-color: #07694C;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
 .foto_card {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+.pet_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px;
+    font-size: 16px;
+}
+
+.pet_info h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    margin: 0;
+    color: #F4ECE1;
+}
+
+.pet_info p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: #F4ECE1;
 }
 
 .btn_card {
-    padding: 1%;
+    background-color: #F4ECE1;
+    color: #07694C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.btn_card:hover {
+    background-color: #fff;
+}
+
+.menu_inferior {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #07694C;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.menu_icon img {
+    width: 30px;
+    height: 30px;
 }

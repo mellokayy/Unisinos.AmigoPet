@@ -1,5 +1,7 @@
 <ion-header>
-  <ion-toolbar></ion-toolbar>
+  <ion-toolbar class="menu_superior">
+    <ion-title class="titulo_pagina">Amigo Pet</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -8,9 +10,12 @@
       <h1>Pets para Adoção</h1>
       <article *ngFor="let item of petList" class="pet_card">
         <img [src]="item.foto" alt="Foto de {{ item.nome }}" class="foto_card">
-        <h2>{{ item.nome }}</h2>
-        <p>{{ item.idade }}</p>
-        <ion-button [routerLink]="['/tabs/detalhe-pet', item.id]" class="btn_card">
+        <div class="pet_info">
+          <h2>{{ item.nome }}</h2>
+          <p>{{ item.idade }}</p>
+        </div>
+
+        <ion-button [color]="item.adotado ? 'success' : 'primary'" [routerLink]="['/tabs/detalhe-pet', item.id]" class="btn_card">
           {{ item.adotado ? 'Adotado' : 'Adotar' }}
         </ion-button>
       </article>
@@ -44,12 +49,29 @@
       <ion-button expand="full" (click)="addPet()">Adicionar Pet</ion-button>
     </section>
 
-    <!-- Lista de Pets Existentes -->
-    <section *ngFor="let pet of petList" class="pet-card">
+    <section *ngFor="let pet of petList" class="pet_card">
       <h3>{{ pet.nome }}</h3>
-      <p>{{ pet.idade }}</p>
-      <img [src]="pet.foto" alt="Foto de {{ pet.nome }}" width="200">
+      <p>{{ pet.idade }} anos</p>
+      <img [src]="pet.foto" alt="Foto de {{ pet.nome }}" class="foto_card">
       <ion-button color="danger" expand="full" (click)="deletePet(pet.id)">Excluir</ion-button>
     </section>
   </main>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar class="menu_inferior">
+    <ion-tab-button tab="home">
+      <img src="/assets/home-icon.svg" class="menu_icon">
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="pets">
+      <img src="/assets/pets-icon.svg" class="menu_icon">
+      <ion-label>Pets</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="contato">
+      <img src="/assets/contact-icon.svg" class="menu_icon">
+      <ion-label>Contato</ion-label>
+    </ion-tab-button>
+  </ion-toolbar>
+</ion-footer>
+

@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px 5px 10px;
-    background-color: #F4ECE1;
+    padding: 10px;
+    background-color: #07694C;
+    color: #F4ECE1;
 }
 
 .icon {
@@ -13,20 +14,71 @@
 
 .titulo_pagina {
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: #07694C;
+    color: #F4ECE1;
 }
 
-img {
-    height: 150px;
+.pet-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-article {
-    color: black;
+.pet-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
-button {
+.pet-info {
+    background-color: #F4ECE1;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.pet-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.adopt-button {
     background-color: #07694C;
+    color: #F4ECE1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+.menu_inferior {
+    display: flex;
+    justify-content: space-around;
     padding: 10px;
+    background-color: #07694C;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ion-tab-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F4ECE1;
+    font-family: "Montserrat", sans-serif;
+}
+
+ion-icon {
+    font-size: 24px;
 }
